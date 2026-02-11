@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# Prisme — Le média qui éclaire l'actualité
 
-## Project info
+Bienvenue sur le projet **Prisme Media**, une plateforme d'actualités et de documentaires innovante focalisée sur l'Afrique et les enjeux internationaux.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## À Propos
 
-## How can I edit this code?
+Prisme est conçu pour offrir une perspective unique sur l'actualité à travers des reportages de fond, des analyses percutantes et des décryptages vidéo modernes. L'interface est inspirée par les codes visuels du média Brut, offrant une navigation fluide et immersive.
 
-There are several ways of editing your application.
+## Technologies Utilisées
 
-**Use Lovable**
+Ce projet est construit avec une stack moderne et performante :
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Vite** : Pour un environnement de développement ultra-rapide et un build optimisé.
+- **TypeScript** : Pour une base de code typée, sûre et maintenable.
+- **React** : Pour une interface utilisateur dynamique et réactive.
+- **shadcn/ui** : Pour des composants d'interface élégants et accessibles.
+- **Tailwind CSS** : Pour un design système flexible et moderne.
+- **Lucide React** : Pour une iconographie claire et cohérente.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Installation et Lancement
 
-**Use your preferred IDE**
+Pour lancer le projet localement :
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prérequis
+- Node.js (version LTS recommandée)
+- npm ou yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Étapes
+1. Clonez le dépôt.
+2. Installez les dépendances :
+   ```sh
+   npm install
+   ```
+3. Lancez le serveur de développement :
+   ```sh
+   npm run dev
+   ```
+4. Accédez à l'application sur `http://localhost:8080`.
 
-Follow these steps:
+## Architecture du Projet
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- `src/components` : Composants réutilisables (UI, layout, vidéo).
+- `src/pages` : Pages principales de l'application.
+- `src/data` : Données simulées (mock data) pour le contenu.
+- `src/lib` : Utilitaires et configurations externes (ex: utils.ts).
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+© 2026 Prisme Media. Tous droits réservés.
