@@ -1,4 +1,5 @@
 import { VideoGrid } from "@/components/video/VideoGrid";
+import { TrendingCarousel } from "@/components/video/TrendingCarousel";
 import { MOCK_VIDEOS, HERO_VIDEO } from "@/data/mockData";
 import { Play, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,21 +32,24 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 pt-2">
               <Button size="lg" className="w-full sm:w-auto rounded-full font-bold text-base bg-white text-black hover:bg-gray-200">
                 <Play className="w-5 h-5 mr-2 fill-black" />
-                Watch Now
+                Regarder
               </Button>
               <Button size="lg" className="w-full sm:w-auto rounded-full font-bold text-base bg-black/80 text-white hover:bg-black border border-white/30 backdrop-blur-sm">
                 <Info className="w-5 h-5 mr-2" />
-                More Info
+                Plus d'infos
               </Button>
             </div>
           </div>
         </div>
       </Link>
 
+      {/* Trending Section */}
+      <TrendingCarousel videos={MOCK_VIDEOS} />
+
       {/* Video Sections */}
-      <VideoGrid title="Latest Videos" videos={MOCK_VIDEOS.slice(0, 4)} />
-      <VideoGrid title="Documentaries" videos={MOCK_VIDEOS.filter(v => v.category === 'Documentary' || v.title.includes('legacy') || v.category === 'Culture')} />
-      <VideoGrid title="Trending Now" videos={MOCK_VIDEOS.slice(4, 8)} />
+      <VideoGrid title="Dernières Vidéos" videos={MOCK_VIDEOS.slice(0, 4)} />
+      <VideoGrid title="Documentaires" videos={MOCK_VIDEOS.filter(v => v.category === 'Documentaire' || v.title.includes('legacy') || v.category === 'Culture' || v.category === 'Société')} />
+      <VideoGrid title="Tendances" videos={MOCK_VIDEOS.slice(4, 8)} />
     </div>
   );
 };

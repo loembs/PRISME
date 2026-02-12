@@ -75,17 +75,16 @@ export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="flex h-24 items-center px-4 lg:px-8 gap-4 max-w-[1920px] mx-auto">
+        <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+            <div className="flex h-20 items-center px-4 lg:px-8 gap-4 max-w-[1920px] mx-auto">
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
                     <img
-                        src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1770812136/PRSME_lc1kwf.png"
+                        src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1770894810/PRSME1__1_-removebg-preview_aoewul.png"
                         alt="Prisme"
-                        className="h-60 lg:h-60 w-auto object-contain transition-all duration-300"
+                        className="h-80 w-auto object-contain"
                     />
                 </Link>
-
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-1 flex-1 ml-6">
                     {mainMenuItems.map((item) => {
@@ -95,12 +94,12 @@ export function Header() {
                             <Link
                                 key={item.title}
                                 to={item.url}
-                                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-semibold transition-colors ${isActive
-                                    ? "bg-primary text-primary-foreground"
-                                    : "text-foreground/80 hover:bg-accent hover:text-accent-foreground"
+                                className={`flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-bold uppercase tracking-wider transition-all ${isActive
+                                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                                    : "text-foreground/80 hover:text-primary hover:bg-primary/5"
                                     }`}
                             >
-                                <Icon className="w-4 h-4" />
+                                <Icon className="w-3.5 h-3.5" />
                                 <span>{item.title}</span>
                             </Link>
                         );
@@ -109,19 +108,19 @@ export function Header() {
                     {/* More Dropdown */}
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-semibold text-foreground/80 hover:bg-accent hover:text-accent-foreground">
+                            <Button variant="ghost" className="flex items-center gap-1 px-4 py-2 rounded-full text-[13px] font-bold uppercase tracking-wider text-foreground/80 hover:text-primary hover:bg-primary/5">
                                 Plus
-                                <ChevronDown className="w-4 h-4" />
+                                <ChevronDown className="w-3.5 h-3.5" />
                             </Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="w-48">
+                        <DropdownMenuContent align="start" className="w-48 p-1 rounded-xl border-border shadow-2xl">
                             {moreMenuItems.map((item) => {
                                 const Icon = item.icon;
                                 return (
                                     <DropdownMenuItem key={item.title} asChild>
                                         <Link
                                             to={item.url}
-                                            className="flex items-center gap-2 cursor-pointer"
+                                            className="flex items-center gap-2 cursor-pointer px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors focus:bg-primary focus:text-primary-foreground"
                                         >
                                             <Icon className="w-4 h-4" />
                                             <span>{item.title}</span>
@@ -134,14 +133,14 @@ export function Header() {
                 </nav>
 
                 {/* Right Side Actions */}
-                <div className="flex items-center gap-2 ml-auto md:ml-0">
+                <div className="flex items-center gap-3 ml-auto md:ml-0">
                     {/* Search Bar - Desktop */}
                     <div className="relative hidden lg:flex items-center">
-                        <Search className="absolute left-3 w-4 h-4 text-muted-foreground" />
+                        <Search className="absolute left-3.5 w-4 h-4 text-muted-foreground" />
                         <input
                             type="text"
                             placeholder="Rechercher..."
-                            className="w-48 xl:w-64 bg-secondary/50 border-none rounded-full py-2 pl-9 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                            className="w-48 xl:w-64 bg-secondary border border-border/50 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:bg-background transition-all"
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter') {
                                     window.location.href = `/search?q=${(e.target as HTMLInputElement).value}`;
@@ -151,17 +150,17 @@ export function Header() {
                     </div>
 
                     {/* Search Button - Mobile/Tablet */}
-                    <Button variant="ghost" size="icon" className="lg:hidden">
+                    <Button variant="ghost" size="icon" className="lg:hidden rounded-full hover:bg-primary/5 hover:text-primary">
                         <Search className="w-5 h-5" />
                     </Button>
 
                     {/* Subscribe Button */}
-                    <Button variant="default" className="hidden sm:flex rounded-full font-bold bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Button variant="default" className="hidden sm:flex rounded-full px-6 font-bold uppercase tracking-wider text-xs bg-primary text-primary-foreground hover:bg-primary/90 transition-transform active:scale-95 shadow-md shadow-primary/20">
                         S'abonner
                     </Button>
 
                     {/* User Button */}
-                    <Button variant="ghost" size="icon">
+                    <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/5 hover:text-primary">
                         <User className="w-5 h-5" />
                     </Button>
 

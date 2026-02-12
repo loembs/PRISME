@@ -12,8 +12,8 @@ export function Footer() {
             { label: "Contact", href: "/contact" },
         ],
         "Catégories": [
-            { label: "Documentaires", href: "/category/documentary" },
-            { label: "Actualités", href: "/category/news" },
+            { label: "Documentaires", href: "/category/documentaires" },
+            { label: "Actualités", href: "/category/actualites" },
             { label: "Nature", href: "/category/nature" },
             { label: "Culture", href: "/category/culture" },
         ],
@@ -33,32 +33,32 @@ export function Footer() {
     ];
 
     return (
-        <footer className="w-full bg-background border-t border-border/40 mt-16">
-            <div className="max-w-[1920px] mx-auto px-4 md:px-8 py-12">
+        <footer className="w-full bg-background border-t border-border mt-20">
+            <div className="max-w-[1920px] mx-auto px-4 md:px-8 py-16">
                 {/* Main Footer Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
                     {/* Brand Section */}
                     <div className="lg:col-span-2">
-                        <Link to="/" className="inline-block mb-4">
+                        <Link to="/" className="inline-block mb-6">
                             <img
-                                src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1770812136/PRSME_lc1kwf.png"
+                                src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1770894810/PRSME1__1_-removebg-preview_aoewul.png"
                                 alt="Prisme"
-                                className="h-60 lg:h-60 w-auto object-contain transition-all duration-300"
+                                className="h-80 w-auto object-contain"
                             />
                         </Link>
-                        <p className="text-sm text-muted-foreground mb-6 max-w-md">
+                        <p className="text-base text-muted-foreground mb-8 max-w-sm leading-relaxed">
                             Votre source d'information et de documentaires sur l'Afrique.
                             Découvrez des histoires qui comptent, racontées par ceux qui les vivent.
                         </p>
 
                         {/* Newsletter */}
-                        <div className="flex gap-2 max-w-md">
+                        <div className="flex flex-col sm:flex-row gap-3 max-w-md">
                             <input
                                 type="email"
                                 placeholder="Votre email"
-                                className="flex-1 bg-secondary/50 border border-border rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="flex-1 bg-secondary border border-border rounded-full px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:bg-background transition-all"
                             />
-                            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold text-sm hover:bg-primary/90 transition-colors flex items-center gap-2">
+                            <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
                                 <Mail className="w-4 h-4" />
                                 S'abonner
                             </button>

@@ -16,10 +16,10 @@ const Search = () => {
         <div className="space-y-8 animate-in fade-in duration-500">
             <div className="space-y-2">
                 <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">
-                    Search Results
+                    Résultats de recherche
                 </h1>
                 <p className="text-muted-foreground text-lg">
-                    {filteredVideos.length} result{filteredVideos.length !== 1 && 's'} for "{query}"
+                    {filteredVideos.length} résultat{filteredVideos.length !== 1 && 's'} pour "{query}"
                 </p>
             </div>
 
@@ -27,7 +27,7 @@ const Search = () => {
                 <VideoGrid videos={filteredVideos} />
             ) : (
                 <div className="py-20 text-center">
-                    <p className="text-xl text-muted-foreground">No videos found. Try a different search term.</p>
+                    <p className="text-xl text-muted-foreground">Aucune vidéo trouvée. Essayez un autre terme de recherche.</p>
                 </div>
             )}
         </div>

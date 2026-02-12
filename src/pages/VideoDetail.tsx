@@ -14,7 +14,7 @@ const VideoDetail = () => {
     const video = MOCK_VIDEOS.find(v => v.id === id) || (id === HERO_VIDEO.id ? HERO_VIDEO : null);
 
     if (!video) {
-        return <div className="p-10 text-center">Video not found</div>;
+        return <div className="p-10 text-center">Vidéo introuvable</div>;
     }
 
     return (
@@ -41,13 +41,13 @@ const VideoDetail = () => {
                             <Badge variant="outline" className="border-primary text-primary text-xs font-bold uppercase tracking-wider rounded-none">
                                 {video.category}
                             </Badge>
-                            <span className="text-muted-foreground text-sm">• {video.date} {video.views && `• ${video.views} views`}</span>
+                            <span className="text-muted-foreground text-sm">• {video.date} {video.views && `• ${video.views} vues`}</span>
                         </div>
                         <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
                             {video.title}
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed">
-                            {video.description || "No description available for this video."}
+                            {video.description || "Aucune description disponible pour cette vidéo."}
                         </p>
                     </div>
 
@@ -58,29 +58,29 @@ const VideoDetail = () => {
                         </Avatar>
                         <div className="flex-1">
                             <h3 className="font-bold text-lg">Prisme Media</h3>
-                            <p className="text-sm text-muted-foreground">1.2M Subscribers</p>
+                            <p className="text-sm text-muted-foreground">1,2M Abonnés</p>
                         </div>
                         <Button className="rounded-full font-bold bg-white text-black hover:bg-gray-200">
-                            Subscribe
+                            S'abonner
                         </Button>
                     </div>
 
                     <div className="flex gap-4">
                         <Button variant="secondary" className="rounded-full gap-2">
-                            <ThumbsUp className="w-4 h-4" /> Like
+                            <ThumbsUp className="w-4 h-4" /> J'aime
                         </Button>
                         <Button variant="secondary" className="rounded-full gap-2">
-                            <MessageCircle className="w-4 h-4" /> Comment
+                            <MessageCircle className="w-4 h-4" /> Commentaire
                         </Button>
                         <Button variant="secondary" className="rounded-full gap-2 ml-auto">
-                            <Share2 className="w-4 h-4" /> Share
+                            <Share2 className="w-4 h-4" /> Partager
                         </Button>
                     </div>
                 </div>
 
                 {/* Sidebar Recommendations */}
                 <div className="space-y-6">
-                    <h3 className="text-xl font-bold uppercase">Up Next</h3>
+                    <h3 className="text-xl font-bold uppercase">À suivre</h3>
                     <div className="space-y-4">
                         {MOCK_VIDEOS.slice(0, 5).map(v => (
                             <Link to={`/video/${v.id}`} key={v.id} className="group flex gap-3 hover:bg-accent/5 p-2 transition-colors">

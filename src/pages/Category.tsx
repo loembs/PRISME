@@ -20,7 +20,7 @@ const Category = () => {
         <div className="space-y-8 animate-in fade-in duration-500">
             <div className="space-y-2">
                 <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">{categoryTitle}</h1>
-                <p className="text-muted-foreground text-lg">Latest stories in {categoryTitle}</p>
+                <p className="text-muted-foreground text-lg">Derniers contenus en {categoryTitle}</p>
             </div>
 
             <VideoGrid videos={displayVideos} />

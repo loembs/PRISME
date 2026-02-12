@@ -8,6 +8,10 @@ export interface Article {
   date: string;
   readTime: string;
   featured?: boolean;
+  orientation?: "horizontal" | "vertical";
+  views?: string;
+  duration?: string;
+  tags?: string[];
 }
 
 export const categories = [
