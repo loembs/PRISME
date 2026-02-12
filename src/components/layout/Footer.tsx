@@ -43,7 +43,7 @@ export function Footer() {
                             <img
                                 src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1770894810/PRSME1__1_-removebg-preview_aoewul.png"
                                 alt="Prisme"
-                                className="h-80 w-auto object-contain"
+                                className="h-80 w-80 object-contain"
                             />
                         </Link>
                         <p className="text-base text-muted-foreground mb-8 max-w-sm leading-relaxed">
