@@ -75,7 +75,7 @@ export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-green-600 bg-green-600 backdrop-blur supports-[backdrop-filter]:bg-green-600/95">
+        <header className="sticky top-0 z-50 w-full border-b border-[#006343] bg-[#006343] backdrop-blur supports-[backdrop-filter]:bg-[#006343]/95">
             <div className="flex h-34 items-center px-4 lg:px-8 gap-4 max-w-[1920px] mx-auto">
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
@@ -95,7 +95,7 @@ export function Header() {
                                 key={item.title}
                                 to={item.url}
                                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-bold uppercase tracking-wider transition-all ${isActive
-                                    ? "bg-white text-green-600 shadow-lg"
+                                    ? "bg-white text-[#006343] shadow-lg"
                                     : "text-white hover:text-white hover:bg-white/10"
                                     }`}
                             >
@@ -155,7 +155,7 @@ export function Header() {
                     </Button>
 
                     {/* Subscribe Button */}
-                    <Button variant="default" className="hidden sm:flex rounded-full px-6 font-bold uppercase tracking-wider text-xs bg-white text-green-600 hover:bg-gray-100 transition-transform active:scale-95 shadow-md">
+                    <Button variant="default" className="hidden sm:flex rounded-full px-6 font-bold uppercase tracking-wider text-xs bg-white text-[#006343] hover:bg-gray-100 transition-transform active:scale-95 shadow-md">
                         S'abonner
                     </Button>
 
