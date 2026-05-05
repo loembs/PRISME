@@ -11,6 +11,8 @@ export interface VideoProps {
     date: string;
     views?: string;
     description?: string;
+    /** URL de lecture (embed YouTube ou AWS) */
+    videoUrl?: string;
 }
 
 export function VideoCard({ video }: { video: VideoProps }) {

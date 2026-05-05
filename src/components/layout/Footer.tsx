@@ -41,7 +41,7 @@ export function Footer() {
                     <div className="lg:col-span-2">
                         <Link to="/" className="inline-block mb-6">
                             <img
-                                src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1770894810/PRSME1__1_-removebg-preview_aoewul.png"
+                                src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1777988066/Prisme_logo_exports_logotype_et_tagline_jaune_sur_bg_vert_v5qty4.png"
                                 alt="Prisme"
                                 className="h-80 w-80 object-contain"
                             />

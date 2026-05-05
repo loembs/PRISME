@@ -76,13 +76,13 @@ export function Header() {
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-            <div className="flex h-20 items-center px-4 lg:px-8 gap-4 max-w-[1920px] mx-auto">
+            <div className="flex h-34 items-center px-4 lg:px-8 gap-4 max-w-[1920px] mx-auto">
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
                     <img
-                        src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1770894810/PRSME1__1_-removebg-preview_aoewul.png"
+                        src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1777988066/Prisme_logo_exports_logotype_et_tagline_jaune_sur_bg_vert_v5qty4.png"
                         alt="Prisme"
-                        className="h-80 w-auto object-contain"
+                        className="h-28 sm:h-32 w-auto object-contain"
                     />
                 </Link>
                 {/* Desktop Navigation */}
@@ -140,7 +140,7 @@ export function Header() {
                         <input
                             type="text"
                             placeholder="Rechercher..."
-                            className="w-48 xl:w-64 bg-secondary border border-border/50 rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:bg-background transition-all"
+                            className="w-48 xl:w-64 bg-background border border-orange-500 text-foreground placeholder:text-muted-foreground rounded-full py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:border-orange-600 focus:ring-2 focus:ring-orange-200 transition-all"
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter') {
                                     window.location.href = `/search?q=${(e.target as HTMLInputElement).value}`;
