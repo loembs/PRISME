@@ -80,7 +80,7 @@ export function Header() {
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
                     <img
-                        src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1777988066/Prisme_logo_exports_logotype_et_tagline_jaune_sur_bg_vert_v5qty4.png"
+                        src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1777994727/Prisme_logo_exports_logo_combine%CC%81_jaune_sur_bg_vert_ibyqnw.png"
                         alt="Prisme"
                         className="h-28 sm:h-32 w-auto object-contain"
                     />
