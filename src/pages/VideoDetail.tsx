@@ -129,7 +129,7 @@ const VideoDetail = () => {
                 • {video.date} {video.views && `• ${video.views} vues`}
               </span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
+            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none" style={{ color: '#FF8400' }}>
               {video.title}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">

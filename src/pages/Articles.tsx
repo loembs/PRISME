@@ -42,7 +42,7 @@ const Articles = () => {
     <div className="space-y-8">
       {/* Header */}
       <div className="space-y-4">
-        <h1 className="text-4xl md:text-5xl font-black tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-black tracking-tight" style={{ color: '#FF8400' }}>
           Articles de Presse
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">

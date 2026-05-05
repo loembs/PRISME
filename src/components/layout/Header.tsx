@@ -75,7 +75,7 @@ export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <header className="sticky top-0 z-50 w-full border-b border-green-600 bg-green-600 backdrop-blur supports-[backdrop-filter]:bg-green-600/95">
             <div className="flex h-34 items-center px-4 lg:px-8 gap-4 max-w-[1920px] mx-auto">
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
@@ -95,8 +95,8 @@ export function Header() {
                                 key={item.title}
                                 to={item.url}
                                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-bold uppercase tracking-wider transition-all ${isActive
-                                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
-                                    : "text-foreground/80 hover:text-primary hover:bg-primary/5"
+                                    ? "bg-white text-green-600 shadow-lg"
+                                    : "text-white hover:text-white hover:bg-white/10"
                                     }`}
                             >
                                 <Icon className="w-3.5 h-3.5" />
@@ -108,7 +108,7 @@ export function Header() {
                     {/* More Dropdown */}
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" className="flex items-center gap-1 px-4 py-2 rounded-full text-[13px] font-bold uppercase tracking-wider text-foreground/80 hover:text-primary hover:bg-primary/5">
+                            <Button variant="ghost" className="flex items-center gap-1 px-4 py-2 rounded-full text-[13px] font-bold uppercase tracking-wider text-white hover:text-white hover:bg-white/10">
                                 Plus
                                 <ChevronDown className="w-3.5 h-3.5" />
                             </Button>
@@ -150,24 +150,24 @@ export function Header() {
                     </div>
 
                     {/* Search Button - Mobile/Tablet */}
-                    <Button variant="ghost" size="icon" className="lg:hidden rounded-full hover:bg-primary/5 hover:text-primary">
+                    <Button variant="ghost" size="icon" className="lg:hidden rounded-full text-white hover:text-white hover:bg-white/10">
                         <Search className="w-5 h-5" />
                     </Button>
 
                     {/* Subscribe Button */}
-                    <Button variant="default" className="hidden sm:flex rounded-full px-6 font-bold uppercase tracking-wider text-xs bg-primary text-primary-foreground hover:bg-primary/90 transition-transform active:scale-95 shadow-md shadow-primary/20">
+                    <Button variant="default" className="hidden sm:flex rounded-full px-6 font-bold uppercase tracking-wider text-xs bg-white text-green-600 hover:bg-gray-100 transition-transform active:scale-95 shadow-md">
                         S'abonner
                     </Button>
 
                     {/* User Button */}
-                    <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/5 hover:text-primary">
+                    <Button variant="ghost" size="icon" className="rounded-full text-white hover:text-white hover:bg-white/10">
                         <User className="w-5 h-5" />
                     </Button>
 
                     {/* Mobile Menu */}
                     <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="md:hidden">
+                            <Button variant="ghost" size="icon" className="md:hidden text-white hover:text-white hover:bg-white/10">
                                 <Menu className="w-5 h-5" />
                             </Button>
                         </SheetTrigger>
